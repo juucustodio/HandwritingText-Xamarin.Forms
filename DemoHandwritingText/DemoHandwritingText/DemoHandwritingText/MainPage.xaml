@@ -4,8 +4,20 @@
              xmlns:local="clr-namespace:DemoHandwritingText"
              x:Class="DemoHandwritingText.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center" 
+                         VerticalOptions="Center">
+                <Image x:Name="MinhaImagem" Aspect="AspectFill" HeightRequest="200" 
+                       WidthRequest="400" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <Button Clicked="TakePicture" Text="Foto"></Button>
+            <Label  x:Name="Resultado" FontAttributes="Bold" FontSize="20"  
+                    HorizontalOptions="CenterAndExpand"/>
+
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>
